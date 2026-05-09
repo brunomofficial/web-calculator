@@ -160,22 +160,39 @@ body{
 
     .btns{
         top: 120px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    .numBtns{
+        width: 100%;
+        position: relative;
+        height: auto;
+        top: 0;
+        left: 0;
+        margin-bottom: 10px;
+        gap: 6px;
     }
 
     .numBtn{
         font-size: 1.2rem;
     }
 
+    .oprBtns{
+        width: 100%;
+        position: relative;
+        height: auto;
+        top: 0;
+        right: 0;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        margin-bottom: 10px;
+        gap: 6px;
+    }
+
     .oprBtn{
         font-size: 1.3rem;
-    }
-
-    .numBtns{
-        gap: 6px;
-    }
-
-    .oprBtns{
-        gap: 6px;
     }
 
     .clrBtn{
@@ -207,23 +224,40 @@ body{
 
     .btns{
         top: 100px;
-        width: 85%;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .numBtns{
+        width: 100%;
+        position: relative;
+        height: auto;
+        top: 0;
+        left: 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 4px;
     }
 
     .numBtn{
         font-size: 1rem;
     }
 
+    .oprBtns{
+        width: 100%;
+        position: relative;
+        height: auto;
+        top: 0;
+        right: 0;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        gap: 4px;
+    }
+
     .oprBtn{
         font-size: 1.1rem;
-    }
-
-    .numBtns{
-        gap: 4px;
-    }
-
-    .oprBtns{
-        gap: 4px;
     }
 
     .clrBtn{
