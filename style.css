@@ -1,0 +1,148 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.container{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.calc{
+    width: 30%;
+    height: 95%;
+    background-color: rgba(245, 245, 245, 0.526);
+    border-radius: 15px;
+    position: relative;
+}
+
+.textField{
+    position: absolute;
+    transform: translate(-50%);
+    top: 25px;
+    left: 50%;
+    background-color: aliceblue;
+    height: 100px;
+    width: 78%;
+    text-align: right;
+    font-size: 3.5rem;
+    padding-inline: 5px;
+}
+
+.btns{
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    top: 150px;
+    bottom: 20px;
+    background-color: rgb(120, 158, 211);
+    width: 80%;
+    border-radius: 10px;
+}
+
+.numBtns{
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    width: 70%;
+    height: 75%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 8px;
+}
+.numBtn{
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+}
+.numBtn:hover{
+    transition: 0.5s ease;
+    transform: scale(1.05);
+}
+.oprBtns{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 22%;
+    height: 75%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 8px;
+}
+.oprBtn{
+    border-radius: 5px;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    background-color: rgba(10, 3, 78, 0.715);
+    color: white;
+}
+.oprBtn:hover{
+    transform: scale(1.019);
+}
+
+.funcBtns{
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 82px;
+}
+
+.equBtn{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 49%;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(38, 205, 29);
+    font-size: 1.8rem;
+}
+.equBtn:hover{
+    transition: 0.5s ease;
+    transform: scale(1.019); 
+}
+
+.clrBtn{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 24%;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 166, 0, 0.604);
+    font-size: 1.4rem;
+}
+.clrBtn:hover{
+    transition: 0.5s ease;
+    transform: scale(1.019);
+}
+
+.delBtn{
+    position: absolute;
+    left: 25%;
+    height: 100%;
+    width: 25%;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 0, 0, 0.592);
+    font-size: 1.4rem;
+
+}
+.delBtn:hover{
+    transition: 0.5s ease;
+    transform: scale(1.019);
+}
+
+
+
