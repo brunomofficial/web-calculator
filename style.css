@@ -145,4 +145,100 @@ body{
 }
 
 
+/* Mobile view for tablets and smaller devices */
+@media (max-width: 768px) {
+    .calc{
+        width: 50%;
+        height: 90%;
+    }
 
+    .textField{
+        height: 80px;
+        font-size: 2.5rem;
+        top: 20px;
+    }
+
+    .btns{
+        top: 120px;
+    }
+
+    .numBtn{
+        font-size: 1.2rem;
+    }
+
+    .oprBtn{
+        font-size: 1.3rem;
+    }
+
+    .numBtns{
+        gap: 6px;
+    }
+
+    .oprBtns{
+        gap: 6px;
+    }
+
+    .clrBtn{
+        font-size: 1.1rem;
+    }
+
+    .delBtn{
+        font-size: 1.1rem;
+    }
+
+    .equBtn{
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile view for phones */
+@media (max-width: 480px) {
+    .calc{
+        width: 85%;
+        height: 85%;
+    }
+
+    .textField{
+        height: 70px;
+        font-size: 2rem;
+        top: 15px;
+        width: 85%;
+    }
+
+    .btns{
+        top: 100px;
+        width: 85%;
+    }
+
+    .numBtn{
+        font-size: 1rem;
+    }
+
+    .oprBtn{
+        font-size: 1.1rem;
+    }
+
+    .numBtns{
+        gap: 4px;
+    }
+
+    .oprBtns{
+        gap: 4px;
+    }
+
+    .clrBtn{
+        font-size: 0.9rem;
+    }
+
+    .delBtn{
+        font-size: 0.9rem;
+    }
+
+    .equBtn{
+        font-size: 1.2rem;
+    }
+
+    .funcBtns{
+        height: 70px;
+    }
+}
