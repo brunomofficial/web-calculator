@@ -1,323 +1,370 @@
-body{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: black;
 }
 
-.container{
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
     background-color: black;
-    height: 100vh;
-    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    background-color: black;
+    min-height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
 }
 
-.calc{
-    width: 30%;
-    height: 95%;
+.calc {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     background-color: rgba(245, 245, 245, 0.526);
     border-radius: 15px;
-    position: relative;
     display: flex;
     flex-direction: column;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.textField{
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
+.textField {
     background-color: aliceblue;
-    height: 100px;
-    width: 88%;
+    height: 80px;
+    width: 100%;
     text-align: right;
-    font-size: 3.5rem;
-    padding-inline: 5px;
-    margin: 15px auto;
-    border-radius: 5px;
+    font-size: 2.5rem;
+    padding: 10px 15px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding-right: 15px;
-    overflow: hidden;
+    margin-bottom: 15px;
     word-wrap: break-word;
+    overflow: hidden;
+    font-weight: bold;
 }
 
-.btns{
-    position: relative;
-    transform: none;
-    left: 0;
-    top: 0;
-    bottom: auto;
+.btns {
     background-color: rgb(120, 158, 211);
-    width: 88%;
-    margin: 0 auto;
     border-radius: 10px;
-    padding: 15px;
-    flex: 1;
+    padding: 12px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.numBtns{
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
+.numBtns {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 8px;
-    flex: 1;
 }
 
-.numBtn{
-    font-size: 1.5rem;
+.numBtn {
+    font-size: 1.3rem;
     font-weight: bold;
     border-radius: 5px;
     border: none;
+    background-color: white;
+    padding: 12px;
     cursor: pointer;
-    padding: 10px;
+    transition: all 0.2s ease;
+    min-height: 50px;
 }
 
-.numBtn:hover{
-    transition: 0.5s ease;
+.numBtn:active {
+    transform: scale(0.95);
+    background-color: #f0f0f0;
+}
+
+.numBtn:hover {
+    background-color: #f5f5f5;
     transform: scale(1.05);
 }
 
-.oprBtns{
-    position: relative;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: auto;
+.oprBtns {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
     gap: 8px;
 }
 
-.oprBtn{
+.oprBtn {
     border-radius: 5px;
     border: none;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: bold;
     background-color: rgba(10, 3, 78, 0.715);
     color: white;
+    padding: 12px;
     cursor: pointer;
-    padding: 10px;
+    transition: all 0.2s ease;
+    min-height: 50px;
 }
 
-.oprBtn:hover{
-    transform: scale(1.019);
+.oprBtn:active {
+    transform: scale(0.95);
 }
 
-.funcBtns{
-    position: relative;
-    left: 0;
-    right: 0;
-    bottom: auto;
-    height: auto;
-    width: 100%;
+.oprBtn:hover {
+    transform: scale(1.05);
+    background-color: rgba(10, 3, 78, 0.9);
+}
+
+.funcBtns {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 8px;
 }
 
-.equBtn{
-    position: relative;
-    right: 0;
-    height: 100%;
-    width: 100%;
+.equBtn {
     border-radius: 5px;
     border: none;
     background-color: rgb(38, 205, 29);
-    font-size: 1.8rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 12px;
     cursor: pointer;
-    padding: 10px;
+    color: white;
+    transition: all 0.2s ease;
+    min-height: 50px;
 }
 
-.equBtn:hover{
-    transition: 0.5s ease;
-    transform: scale(1.019); 
+.equBtn:active {
+    transform: scale(0.95);
 }
 
-.clrBtn{
-    position: relative;
-    left: 0;
-    height: 100%;
-    width: 100%;
+.equBtn:hover {
+    transform: scale(1.05);
+    background-color: rgb(45, 230, 35);
+}
+
+.clrBtn {
     border-radius: 5px;
     border: none;
     background-color: rgba(255, 166, 0, 0.604);
-    font-size: 1.4rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 12px;
     cursor: pointer;
-    padding: 10px;
+    transition: all 0.2s ease;
+    min-height: 50px;
 }
 
-.clrBtn:hover{
-    transition: 0.5s ease;
-    transform: scale(1.019);
+.clrBtn:active {
+    transform: scale(0.95);
 }
 
-.delBtn{
-    position: relative;
-    left: 0;
-    height: 100%;
-    width: 100%;
+.clrBtn:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 166, 0, 0.8);
+}
+
+.delBtn {
     border-radius: 5px;
     border: none;
     background-color: rgba(255, 0, 0, 0.592);
-    font-size: 1.4rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 12px;
     cursor: pointer;
-    padding: 10px;
+    color: white;
+    transition: all 0.2s ease;
+    min-height: 50px;
 }
 
-.delBtn:hover{
-    transition: 0.5s ease;
-    transform: scale(1.019);
+.delBtn:active {
+    transform: scale(0.95);
 }
 
+.delBtn:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 0, 0, 0.8);
+}
 
-/* Mobile view for tablets and smaller devices */
+/* Tablet view */
 @media (max-width: 768px) {
-    .container{
-        height: auto;
-        min-height: 100vh;
-        padding: 10px;
-    }
-
-    .calc{
-        width: 85%;
-        height: auto;
-        max-height: 90vh;
-    }
-
-    .textField{
-        height: 80px;
-        font-size: 2.5rem;
-        margin: 10px auto;
-        width: 90%;
-    }
-
-    .btns{
-        width: 90%;
-        gap: 8px;
+    .calc {
+        width: 95%;
+        max-width: 100%;
         padding: 12px;
     }
 
-    .numBtns{
-        gap: 6px;
+    .textField {
+        height: 70px;
+        font-size: 2rem;
+        margin-bottom: 12px;
     }
 
-    .numBtn{
+    .btns {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .numBtn {
         font-size: 1.2rem;
-        padding: 8px;
+        min-height: 45px;
+        padding: 10px;
     }
 
-    .oprBtns{
+    .oprBtn {
+        font-size: 1.2rem;
+        min-height: 45px;
+        padding: 10px;
+    }
+
+    .clrBtn {
+        font-size: 1rem;
+        min-height: 45px;
+        padding: 10px;
+    }
+
+    .delBtn {
+        font-size: 1rem;
+        min-height: 45px;
+        padding: 10px;
+    }
+
+    .equBtn {
+        font-size: 1.2rem;
+        min-height: 45px;
+        padding: 10px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+
+    .calc {
+        width: 100%;
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .textField {
+        height: 60px;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        padding: 8px 12px;
+    }
+
+    .btns {
+        padding: 8px;
         gap: 6px;
     }
 
-    .oprBtn{
-        font-size: 1.3rem;
-        padding: 8px;
-    }
-
-    .funcBtns{
+    .numBtns {
         gap: 6px;
     }
 
-    .clrBtn{
-        font-size: 1.1rem;
+    .numBtn {
+        font-size: 1rem;
+        min-height: 40px;
         padding: 8px;
     }
 
-    .delBtn{
-        font-size: 1.1rem;
+    .oprBtns {
+        gap: 6px;
+    }
+
+    .oprBtn {
+        font-size: 1rem;
+        min-height: 40px;
         padding: 8px;
     }
 
-    .equBtn{
-        font-size: 1.5rem;
+    .funcBtns {
+        gap: 6px;
+    }
+
+    .clrBtn {
+        font-size: 0.9rem;
+        min-height: 40px;
+        padding: 8px;
+    }
+
+    .delBtn {
+        font-size: 0.9rem;
+        min-height: 40px;
+        padding: 8px;
+    }
+
+    .equBtn {
+        font-size: 1rem;
+        min-height: 40px;
         padding: 8px;
     }
 }
 
-/* Mobile view for phones */
-@media (max-width: 480px) {
-    .container{
-        height: auto;
-        min-height: 100vh;
-        padding: 5px;
+/* Extra small phones */
+@media (max-width: 320px) {
+    .calc {
+        padding: 8px;
     }
 
-    .calc{
-        width: 95%;
-        height: auto;
-        max-height: 100vh;
-        margin: 5px auto;
+    .textField {
+        height: 55px;
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+        padding: 6px 10px;
     }
 
-    .textField{
-        height: 70px;
-        font-size: 1.8rem;
-        margin: 8px auto;
-        width: 92%;
-        padding-right: 12px;
-    }
-
-    .btns{
-        width: 92%;
-        gap: 6px;
-        padding: 10px;
-    }
-
-    .numBtns{
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        gap: 4px;
-    }
-
-    .numBtn{
-        font-size: 1rem;
+    .btns {
         padding: 6px;
+        gap: 5px;
     }
 
-    .oprBtns{
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr;
-        gap: 4px;
+    .numBtns {
+        gap: 5px;
     }
 
-    .oprBtn{
-        font-size: 1rem;
-        padding: 6px;
-    }
-
-    .funcBtns{
-        gap: 4px;
-    }
-
-    .clrBtn{
+    .numBtn {
         font-size: 0.9rem;
+        min-height: 35px;
         padding: 6px;
     }
 
-    .delBtn{
+    .oprBtns {
+        gap: 5px;
+    }
+
+    .oprBtn {
         font-size: 0.9rem;
+        min-height: 35px;
         padding: 6px;
     }
 
-    .equBtn{
-        font-size: 1.2rem;
+    .funcBtns {
+        gap: 5px;
+    }
+
+    .clrBtn {
+        font-size: 0.8rem;
+        min-height: 35px;
+        padding: 6px;
+    }
+
+    .delBtn {
+        font-size: 0.8rem;
+        min-height: 35px;
+        padding: 6px;
+    }
+
+    .equBtn {
+        font-size: 0.9rem;
+        min-height: 35px;
         padding: 6px;
     }
 }
