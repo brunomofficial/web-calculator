@@ -13,71 +13,96 @@ body{
     justify-content: center;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
 }
+
 .calc{
     width: 30%;
     height: 95%;
     background-color: rgba(245, 245, 245, 0.526);
     border-radius: 15px;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .textField{
-    position: absolute;
-    transform: translate(-50%);
-    top: 25px;
-    left: 50%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
     background-color: aliceblue;
     height: 100px;
-    width: 78%;
+    width: 88%;
     text-align: right;
     font-size: 3.5rem;
     padding-inline: 5px;
+    margin: 15px auto;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 15px;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 .btns{
-    position: absolute;
-    transform: translate(-50%);
-    left: 50%;
-    top: 150px;
-    bottom: 20px;
+    position: relative;
+    transform: none;
+    left: 0;
+    top: 0;
+    bottom: auto;
     background-color: rgb(120, 158, 211);
-    width: 80%;
+    width: 88%;
+    margin: 0 auto;
     border-radius: 10px;
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .numBtns{
-    position: absolute;
-    left: 10px;
-    top: 15px;
-    width: 70%;
-    height: 75%;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 8px;
+    flex: 1;
 }
+
 .numBtn{
     font-size: 1.5rem;
     font-weight: bold;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
+    padding: 10px;
 }
+
 .numBtn:hover{
     transition: 0.5s ease;
     transform: scale(1.05);
 }
+
 .oprBtns{
-    position: absolute;
-    top: 15px;
-    right: 10px;
-    width: 22%;
-    height: 75%;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
     gap: 8px;
 }
+
 .oprBtn{
     border-radius: 5px;
     border: none;
@@ -85,60 +110,76 @@ body{
     font-weight: bold;
     background-color: rgba(10, 3, 78, 0.715);
     color: white;
+    cursor: pointer;
+    padding: 10px;
 }
+
 .oprBtn:hover{
     transform: scale(1.019);
 }
 
 .funcBtns{
-    position: absolute;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    height: 82px;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 8px;
 }
 
 .equBtn{
-    position: absolute;
+    position: relative;
     right: 0;
     height: 100%;
-    width: 49%;
+    width: 100%;
     border-radius: 5px;
     border: none;
     background-color: rgb(38, 205, 29);
     font-size: 1.8rem;
+    cursor: pointer;
+    padding: 10px;
 }
+
 .equBtn:hover{
     transition: 0.5s ease;
     transform: scale(1.019); 
 }
 
 .clrBtn{
-    position: absolute;
+    position: relative;
     left: 0;
     height: 100%;
-    width: 24%;
+    width: 100%;
     border-radius: 5px;
     border: none;
     background-color: rgba(255, 166, 0, 0.604);
     font-size: 1.4rem;
+    cursor: pointer;
+    padding: 10px;
 }
+
 .clrBtn:hover{
     transition: 0.5s ease;
     transform: scale(1.019);
 }
 
 .delBtn{
-    position: absolute;
-    left: 25%;
+    position: relative;
+    left: 0;
     height: 100%;
-    width: 25%;
+    width: 100%;
     border-radius: 5px;
     border: none;
     background-color: rgba(255, 0, 0, 0.592);
     font-size: 1.4rem;
-
+    cursor: pointer;
+    padding: 10px;
 }
+
 .delBtn:hover{
     transition: 0.5s ease;
     transform: scale(1.019);
@@ -147,95 +188,99 @@ body{
 
 /* Mobile view for tablets and smaller devices */
 @media (max-width: 768px) {
+    .container{
+        height: auto;
+        min-height: 100vh;
+        padding: 10px;
+    }
+
     .calc{
-        width: 50%;
-        height: 90%;
+        width: 85%;
+        height: auto;
+        max-height: 90vh;
     }
 
     .textField{
         height: 80px;
         font-size: 2.5rem;
-        top: 20px;
-    }
-
-    .btns{
-        top: 120px;
-        display: flex;
-        flex-wrap: wrap;
+        margin: 10px auto;
         width: 90%;
     }
 
+    .btns{
+        width: 90%;
+        gap: 8px;
+        padding: 12px;
+    }
+
     .numBtns{
-        width: 100%;
-        position: relative;
-        height: auto;
-        top: 0;
-        left: 0;
-        margin-bottom: 10px;
         gap: 6px;
     }
 
     .numBtn{
         font-size: 1.2rem;
+        padding: 8px;
     }
 
     .oprBtns{
-        width: 100%;
-        position: relative;
-        height: auto;
-        top: 0;
-        right: 0;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr;
-        margin-bottom: 10px;
         gap: 6px;
     }
 
     .oprBtn{
         font-size: 1.3rem;
+        padding: 8px;
+    }
+
+    .funcBtns{
+        gap: 6px;
     }
 
     .clrBtn{
         font-size: 1.1rem;
+        padding: 8px;
     }
 
     .delBtn{
         font-size: 1.1rem;
+        padding: 8px;
     }
 
     .equBtn{
         font-size: 1.5rem;
+        padding: 8px;
     }
 }
 
 /* Mobile view for phones */
 @media (max-width: 480px) {
+    .container{
+        height: auto;
+        min-height: 100vh;
+        padding: 5px;
+    }
+
     .calc{
-        width: 85%;
-        height: 85%;
+        width: 95%;
+        height: auto;
+        max-height: 100vh;
+        margin: 5px auto;
     }
 
     .textField{
         height: 70px;
-        font-size: 2rem;
-        top: 15px;
-        width: 85%;
+        font-size: 1.8rem;
+        margin: 8px auto;
+        width: 92%;
+        padding-right: 12px;
     }
 
     .btns{
-        top: 100px;
-        width: 90%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 4px;
+        width: 92%;
+        gap: 6px;
+        padding: 10px;
     }
 
     .numBtns{
-        width: 100%;
-        position: relative;
-        height: auto;
-        top: 0;
-        left: 0;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 1fr);
         gap: 4px;
@@ -243,36 +288,36 @@ body{
 
     .numBtn{
         font-size: 1rem;
+        padding: 6px;
     }
 
     .oprBtns{
-        width: 100%;
-        position: relative;
-        height: auto;
-        top: 0;
-        right: 0;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
         gap: 4px;
     }
 
     .oprBtn{
-        font-size: 1.1rem;
+        font-size: 1rem;
+        padding: 6px;
+    }
+
+    .funcBtns{
+        gap: 4px;
     }
 
     .clrBtn{
         font-size: 0.9rem;
+        padding: 6px;
     }
 
     .delBtn{
         font-size: 0.9rem;
+        padding: 6px;
     }
 
     .equBtn{
         font-size: 1.2rem;
-    }
-
-    .funcBtns{
-        height: 70px;
+        padding: 6px;
     }
 }
