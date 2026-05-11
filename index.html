@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -10,36 +10,34 @@
     <div class="container">
         <div class="calc">
             <div class="textField" id="textField">
-                <span class = "text" id="textField"></span>
+                <span class="text" id="display"></span>
             </div>
             <div class="btns">
                 <div class="numBtns">
-                    <button class="numBtn" onclick="{updateNum('1')}">1</button>
-                    <button class="numBtn"onclick="{updateNum('2')}">2</button>
-                    <button class="numBtn"onclick="{updateNum('3')}">3</button>
-                    <button class="numBtn" onclick="{updateNum('4')}">4</button>
-                    <button class="numBtn" onclick="{updateNum('5')}">5</button>
-                    <button class="numBtn" onclick="{updateNum('6')}">6</button>
-                    <button class="numBtn" onclick="{updateNum('7')}">7</button>
-                    <button class="numBtn" onclick="{updateNum('8')}">8</button>
-                    <button class="numBtn" onclick="{updateNum('9')}">9</button>
-                    <button class="numBtn"onclick="{updateNum('.')}">.</button>
-                    <button class="numBtn"onclick="{updateNum('0')}">0</button>
-                    <button class="numBtn" onclick="{sqr()}">²</button>
+                    <button class="numBtn" onclick="updateNum('1')">1</button>
+                    <button class="numBtn" onclick="updateNum('2')">2</button>
+                    <button class="numBtn" onclick="updateNum('3')">3</button>
+                    <button class="numBtn" onclick="updateNum('4')">4</button>
+                    <button class="numBtn" onclick="updateNum('5')">5</button>
+                    <button class="numBtn" onclick="updateNum('6')">6</button>
+                    <button class="numBtn" onclick="updateNum('7')">7</button>
+                    <button class="numBtn" onclick="updateNum('8')">8</button>
+                    <button class="numBtn" onclick="updateNum('9')">9</button>
+                    <button class="numBtn" onclick="updateNum('.')">.</button>
+                    <button class="numBtn" onclick="updateNum('0')">0</button>
+                    <button class="numBtn" onclick="sqr()">²</button>
                 </div>
                 <div class="oprBtns">
-                    <button class="oprBtn" onclick="{setOpr('+')}">+</button>
-                    <button class="oprBtn" onclick="{setOpr('-')}">-</button>
-                    <button class="oprBtn" onclick="{setOpr('*')}">x</button>
-                    <button class="oprBtn" onclick="{setOpr('/')}">/</button>
+                    <button class="oprBtn" onclick="setOpr('+')">+</button>
+                    <button class="oprBtn" onclick="setOpr('-')">-</button>
+                    <button class="oprBtn" onclick="setOpr('*')">×</button>
+                    <button class="oprBtn" onclick="setOpr('/')">/</button>
                 </div>
                 <div class="funcBtns">
-                    <button class="delBtn" onclick="{del()}">DEL</button>
-                    <button class="clrBtn" onclick="{clr()}">CLR</button>
-                    <button class="equBtn" onclick="{eval()}">=</button>                    
+                    <button class="delBtn" onclick="del()">DEL</button>
+                    <button class="clrBtn" onclick="clr()">CLR</button>
+                    <button class="equBtn" onclick="calculate()">=</button>                    
                 </div>
-                
-
             </div>
         </div>
     </div>
