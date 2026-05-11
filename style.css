@@ -1,370 +1,298 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
 }
 
 html, body {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
 }
 
 body {
-    background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: black !important;
+    font-family: Arial, Helvetica, sans-serif !important;
 }
 
 .container {
-    background-color: black;
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+    background-color: black !important;
+    min-height: 100vh !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 5px !important;
 }
 
 .calc {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    background-color: rgba(245, 245, 245, 0.526);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 90% !important;
+    max-width: 400px !important;
+    height: auto !important;
+    background-color: rgba(245, 245, 245, 0.526) !important;
+    border-radius: 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 10px !important;
 }
 
 .textField {
-    background-color: aliceblue;
-    height: 80px;
-    width: 100%;
-    text-align: right;
-    font-size: 2.5rem;
-    padding: 10px 15px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-bottom: 15px;
-    word-wrap: break-word;
-    overflow: hidden;
-    font-weight: bold;
+    background-color: aliceblue !important;
+    height: 60px !important;
+    width: 100% !important;
+    text-align: right !important;
+    font-size: 2rem !important;
+    padding: 10px !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    margin-bottom: 10px !important;
+    word-wrap: break-word !important;
+    overflow: hidden !important;
+    font-weight: bold !important;
 }
 
 .btns {
-    background-color: rgb(120, 158, 211);
-    border-radius: 10px;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    background-color: rgb(120, 158, 211) !important;
+    border-radius: 10px !important;
+    padding: 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
 }
 
 .numBtns {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 8px;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: repeat(4, 1fr) !important;
+    gap: 5px !important;
 }
 
 .numBtn {
-    font-size: 1.3rem;
-    font-weight: bold;
-    border-radius: 5px;
-    border: none;
-    background-color: white;
-    padding: 12px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    min-height: 50px;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    border-radius: 5px !important;
+    border: none !important;
+    background-color: white !important;
+    padding: 10px !important;
+    cursor: pointer !important;
+    min-height: 40px !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: auto !important;
+    height: auto !important;
 }
 
 .numBtn:active {
-    transform: scale(0.95);
-    background-color: #f0f0f0;
-}
-
-.numBtn:hover {
-    background-color: #f5f5f5;
-    transform: scale(1.05);
+    transform: scale(0.95) !important;
 }
 
 .oprBtns {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 5px !important;
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    width: auto !important;
+    height: auto !important;
 }
 
 .oprBtn {
-    border-radius: 5px;
-    border: none;
-    font-size: 1.4rem;
-    font-weight: bold;
-    background-color: rgba(10, 3, 78, 0.715);
-    color: white;
-    padding: 12px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    min-height: 50px;
-}
-
-.oprBtn:active {
-    transform: scale(0.95);
-}
-
-.oprBtn:hover {
-    transform: scale(1.05);
-    background-color: rgba(10, 3, 78, 0.9);
+    border-radius: 5px !important;
+    border: none !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    background-color: rgba(10, 3, 78, 0.715) !important;
+    color: white !important;
+    padding: 10px !important;
+    cursor: pointer !important;
+    min-height: 40px !important;
+    position: relative !important;
+    top: auto !important;
 }
 
 .funcBtns {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 8px;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 5px !important;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    height: auto !important;
 }
 
 .equBtn {
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(38, 205, 29);
-    font-size: 1.3rem;
-    font-weight: bold;
-    padding: 12px;
-    cursor: pointer;
-    color: white;
-    transition: all 0.2s ease;
-    min-height: 50px;
-}
-
-.equBtn:active {
-    transform: scale(0.95);
-}
-
-.equBtn:hover {
-    transform: scale(1.05);
-    background-color: rgb(45, 230, 35);
+    border-radius: 5px !important;
+    border: none !important;
+    background-color: rgb(38, 205, 29) !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    padding: 10px !important;
+    cursor: pointer !important;
+    color: white !important;
+    min-height: 40px !important;
+    position: relative !important;
+    right: auto !important;
+    width: auto !important;
 }
 
 .clrBtn {
-    border-radius: 5px;
-    border: none;
-    background-color: rgba(255, 166, 0, 0.604);
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 12px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    min-height: 50px;
-}
-
-.clrBtn:active {
-    transform: scale(0.95);
-}
-
-.clrBtn:hover {
-    transform: scale(1.05);
-    background-color: rgba(255, 166, 0, 0.8);
+    border-radius: 5px !important;
+    border: none !important;
+    background-color: rgba(255, 166, 0, 0.604) !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    padding: 10px !important;
+    cursor: pointer !important;
+    min-height: 40px !important;
+    position: relative !important;
+    left: auto !important;
+    width: auto !important;
 }
 
 .delBtn {
-    border-radius: 5px;
-    border: none;
-    background-color: rgba(255, 0, 0, 0.592);
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 12px;
-    cursor: pointer;
-    color: white;
-    transition: all 0.2s ease;
-    min-height: 50px;
-}
-
-.delBtn:active {
-    transform: scale(0.95);
-}
-
-.delBtn:hover {
-    transform: scale(1.05);
-    background-color: rgba(255, 0, 0, 0.8);
+    border-radius: 5px !important;
+    border: none !important;
+    background-color: rgba(255, 0, 0, 0.592) !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    padding: 10px !important;
+    cursor: pointer !important;
+    color: white !important;
+    min-height: 40px !important;
+    position: relative !important;
+    left: auto !important;
+    width: auto !important;
 }
 
 /* Tablet view */
 @media (max-width: 768px) {
     .calc {
-        width: 95%;
-        max-width: 100%;
-        padding: 12px;
+        width: 95% !important;
+        padding: 10px !important;
     }
 
     .textField {
-        height: 70px;
-        font-size: 2rem;
-        margin-bottom: 12px;
-    }
-
-    .btns {
-        padding: 10px;
-        gap: 8px;
+        height: 60px !important;
+        font-size: 2rem !important;
     }
 
     .numBtn {
-        font-size: 1.2rem;
-        min-height: 45px;
-        padding: 10px;
+        font-size: 1rem !important;
+        min-height: 40px !important;
     }
 
     .oprBtn {
-        font-size: 1.2rem;
-        min-height: 45px;
-        padding: 10px;
-    }
-
-    .clrBtn {
-        font-size: 1rem;
-        min-height: 45px;
-        padding: 10px;
-    }
-
-    .delBtn {
-        font-size: 1rem;
-        min-height: 45px;
-        padding: 10px;
-    }
-
-    .equBtn {
-        font-size: 1.2rem;
-        min-height: 45px;
-        padding: 10px;
+        font-size: 1rem !important;
+        min-height: 40px !important;
     }
 }
 
 /* Mobile phones */
 @media (max-width: 480px) {
     .container {
-        padding: 5px;
+        padding: 5px !important;
     }
 
     .calc {
-        width: 100%;
-        padding: 10px;
-        max-width: 100%;
+        width: 100% !important;
+        padding: 10px !important;
     }
 
     .textField {
-        height: 60px;
-        font-size: 1.8rem;
-        margin-bottom: 10px;
-        padding: 8px 12px;
+        height: 55px !important;
+        font-size: 1.5rem !important;
+        margin-bottom: 10px !important;
     }
 
     .btns {
-        padding: 8px;
-        gap: 6px;
+        padding: 8px !important;
+        gap: 6px !important;
     }
 
     .numBtns {
-        gap: 6px;
+        gap: 6px !important;
     }
 
     .numBtn {
-        font-size: 1rem;
-        min-height: 40px;
-        padding: 8px;
+        font-size: 0.9rem !important;
+        min-height: 38px !important;
+        padding: 8px !important;
     }
 
     .oprBtns {
-        gap: 6px;
+        gap: 6px !important;
     }
 
     .oprBtn {
-        font-size: 1rem;
-        min-height: 40px;
-        padding: 8px;
+        font-size: 0.9rem !important;
+        min-height: 38px !important;
+        padding: 8px !important;
     }
 
     .funcBtns {
-        gap: 6px;
+        gap: 6px !important;
     }
 
     .clrBtn {
-        font-size: 0.9rem;
-        min-height: 40px;
-        padding: 8px;
+        font-size: 0.8rem !important;
+        min-height: 38px !important;
+        padding: 8px !important;
     }
 
     .delBtn {
-        font-size: 0.9rem;
-        min-height: 40px;
-        padding: 8px;
+        font-size: 0.8rem !important;
+        min-height: 38px !important;
+        padding: 8px !important;
     }
 
     .equBtn {
-        font-size: 1rem;
-        min-height: 40px;
-        padding: 8px;
+        font-size: 0.9rem !important;
+        min-height: 38px !important;
+        padding: 8px !important;
     }
 }
 
 /* Extra small phones */
 @media (max-width: 320px) {
-    .calc {
-        padding: 8px;
-    }
-
     .textField {
-        height: 55px;
-        font-size: 1.5rem;
-        margin-bottom: 8px;
-        padding: 6px 10px;
-    }
-
-    .btns {
-        padding: 6px;
-        gap: 5px;
-    }
-
-    .numBtns {
-        gap: 5px;
+        height: 50px !important;
+        font-size: 1.3rem !important;
     }
 
     .numBtn {
-        font-size: 0.9rem;
-        min-height: 35px;
-        padding: 6px;
-    }
-
-    .oprBtns {
-        gap: 5px;
+        font-size: 0.8rem !important;
+        min-height: 35px !important;
+        padding: 6px !important;
     }
 
     .oprBtn {
-        font-size: 0.9rem;
-        min-height: 35px;
-        padding: 6px;
-    }
-
-    .funcBtns {
-        gap: 5px;
-    }
-
-    .clrBtn {
-        font-size: 0.8rem;
-        min-height: 35px;
-        padding: 6px;
-    }
-
-    .delBtn {
-        font-size: 0.8rem;
-        min-height: 35px;
-        padding: 6px;
+        font-size: 0.8rem !important;
+        min-height: 35px !important;
+        padding: 6px !important;
     }
 
     .equBtn {
-        font-size: 0.9rem;
-        min-height: 35px;
-        padding: 6px;
+        font-size: 0.8rem !important;
+        min-height: 35px !important;
+        padding: 6px !important;
+    }
+
+    .clrBtn {
+        font-size: 0.75rem !important;
+        min-height: 35px !important;
+        padding: 6px !important;
+    }
+
+    .delBtn {
+        font-size: 0.75rem !important;
+        min-height: 35px !important;
+        padding: 6px !important;
     }
 }
