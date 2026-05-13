@@ -4,7 +4,8 @@
     box-sizing: border-box !important;
 }
 
-html, body {
+html,
+body {
     width: 100% !important;
     height: 100% !important;
     margin: 0 !important;
@@ -171,6 +172,21 @@ body {
     width: auto !important;
 }
 
+/* Tablet and smaller laptop screens */
+@media (max-width: 900px) {
+    .calc {
+        width: min(92vw, 420px) !important;
+    }
+
+    .textField {
+        width: 100% !important;
+    }
+
+    .btns {
+        width: 100% !important;
+    }
+}
+
 /* Tablet view */
 @media (max-width: 768px) {
     .calc {
@@ -197,11 +213,12 @@ body {
 /* Mobile phones */
 @media (max-width: 480px) {
     .container {
-        padding: 5px !important;
+        padding: 16px !important;
     }
 
     .calc {
         width: 100% !important;
+        max-width: 360px !important;
         padding: 10px !important;
     }
 
@@ -209,6 +226,8 @@ body {
         height: 55px !important;
         font-size: 1.5rem !important;
         margin-bottom: 10px !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
     }
 
     .btns {
